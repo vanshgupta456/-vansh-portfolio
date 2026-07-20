@@ -459,6 +459,56 @@ p{ margin: 0; }
 .service-card p{ color: var(--text-muted); font-size: 0.94rem; }
 
 /* ============================================
+   Internships
+   ============================================ */
+.internship-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.internship-card{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.internship-card:hover{
+  border-color: var(--accent);
+  transform: translateY(-4px);
+}
+.internship-head{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 12px;
+  gap: 10px;
+}
+.internship-org{
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.internship-date{
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+.internship-card h3{
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+.internship-card p{
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+}
+.internship-card .tag-list{ margin-bottom: 4px; }
+
+/* ============================================
    Projects
    ============================================ */
 .projects-grid{
@@ -627,6 +677,7 @@ p{ margin: 0; }
   .hero-panel{ order: -1; }
   .skills-grid{ grid-template-columns: 1fr; gap: 48px; }
   .services-grid{ grid-template-columns: repeat(2, 1fr); }
+  .internship-grid{ grid-template-columns: 1fr; }
   .projects-grid{ grid-template-columns: 1fr; }
 }
 
