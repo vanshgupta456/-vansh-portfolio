@@ -346,6 +346,12 @@ p{ margin: 0; }
 }
 .about-copy h2{ margin-bottom: 22px; }
 .about-copy p{ color: var(--text-muted); margin-bottom: 16px; }
+.about-tags{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 22px 0 4px;
+}
 .about-facts{
   display: flex;
   gap: 36px;
@@ -501,10 +507,16 @@ p{ margin: 0; }
   margin-bottom: 10px;
   line-height: 1.3;
 }
-.internship-card p{
+.internship-bullets{
+  margin: 0 0 16px;
+  padding-left: 18px;
+  list-style: disc;
+}
+.internship-bullets li{
   color: var(--text-muted);
   font-size: 0.9rem;
-  margin-bottom: 16px;
+  margin-bottom: 6px;
+  line-height: 1.5;
 }
 .internship-card .tag-list{ margin-bottom: 4px; }
 
