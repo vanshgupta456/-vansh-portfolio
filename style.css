@@ -67,13 +67,15 @@ p{ margin: 0; }
 
 /* faint dot-grid backdrop, dashboard feel */
 .grid-overlay{
-  position: fixed;
-  inset: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 700px;
   pointer-events: none;
   z-index: 0;
   background-image: radial-gradient(circle, rgba(255,255,255,0.035) 1px, transparent 1px);
   background-size: 26px 26px;
-  mask-image: radial-gradient(circle at 50% 0%, black 0%, transparent 70%);
 }
 
 /* ============================================
@@ -108,8 +110,7 @@ p{ margin: 0; }
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(10, 15, 28, 0.82);
-  backdrop-filter: blur(10px);
+  background: rgba(10, 15, 28, 0.97);
   border-bottom: 1px solid var(--border);
 }
 .header-inner{
