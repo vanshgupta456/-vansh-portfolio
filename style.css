@@ -33,6 +33,7 @@ body{
   font-family: var(--font-body);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 img{ max-width: 100%; display: block; }
@@ -466,6 +467,48 @@ p{ margin: 0; }
 .service-card p{ color: var(--text-muted); font-size: 0.94rem; }
 
 /* ============================================
+   Certifications
+   ============================================ */
+.cert-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.cert-card{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.cert-card:hover{
+  border-color: var(--accent);
+  transform: translateY(-4px);
+}
+.cert-issuer{
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 10px;
+}
+.cert-card h3{
+  font-size: 0.98rem;
+  line-height: 1.35;
+  margin-bottom: 10px;
+}
+.cert-date{
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+.cert-card .project-link{ margin-top: auto; }
+
+/* ============================================
    Internships
    ============================================ */
 .internship-grid{
@@ -691,6 +734,7 @@ p{ margin: 0; }
   .skills-grid{ grid-template-columns: 1fr; gap: 48px; }
   .services-grid{ grid-template-columns: repeat(2, 1fr); }
   .internship-grid{ grid-template-columns: 1fr; }
+  .cert-grid{ grid-template-columns: repeat(2, 1fr); }
   .projects-grid{ grid-template-columns: 1fr; }
 }
 
@@ -711,5 +755,10 @@ p{ margin: 0; }
   .nav-toggle{ display: flex; }
   .header-cta{ display: none; }
   .services-grid{ grid-template-columns: 1fr; }
-  .stat-row{ gap: 28px; }
+  .stat-row{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 20px 28px;
+  }
+  .cert-grid{ grid-template-columns: 1fr; }
 }
