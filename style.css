@@ -471,42 +471,65 @@ p{ margin: 0; }
    ============================================ */
 .cert-grid{
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 .cert-card{
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 24px;
+  padding: 32px 28px;
   display: flex;
   flex-direction: column;
-  transition: border-color 0.2s ease, transform 0.2s ease;
+  min-height: 220px;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 .cert-card:hover{
   border-color: var(--accent);
   transform: translateY(-4px);
+  box-shadow: 0 20px 40px -24px rgba(0,0,0,0.5);
 }
 .cert-issuer{
+  display: inline-block;
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   color: var(--accent);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: 10px;
+  letter-spacing: 0.08em;
+  background: var(--accent-soft);
+  padding: 5px 12px;
+  border-radius: 999px;
+  margin-bottom: 18px;
+  width: fit-content;
 }
 .cert-card h3{
-  font-size: 0.98rem;
-  line-height: 1.35;
-  margin-bottom: 10px;
+  font-size: 1.08rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 12px;
+  color: var(--text);
 }
 .cert-date{
+  display: block;
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   color: var(--text-muted);
-  margin-bottom: 16px;
+  margin-bottom: 22px;
 }
-.cert-card .project-link{ margin-top: auto; }
+.cert-card .project-link{
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--accent);
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  width: fit-content;
+}
+.cert-card .project-link:hover{ opacity: 0.75; }
 
 /* ============================================
    Internships
