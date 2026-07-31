@@ -536,7 +536,7 @@ p{ margin: 0; }
    ============================================ */
 .internship-grid{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
 }
 .internship-card{
@@ -586,6 +586,15 @@ p{ margin: 0; }
   line-height: 1.5;
 }
 .internship-card .tag-list{ margin-bottom: 4px; }
+.internship-links{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 18px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+.internship-links .project-link{ margin-top: 0; }
 
 /* ============================================
    Projects
